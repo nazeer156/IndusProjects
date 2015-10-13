@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC
+        "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+        "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+
+<hibernate-mapping package="com.indus.persistance.domain">
+
+	<class name="Employee" table="EMPLOYEES">
+
+		<id name="employeeId" column="EMPLOYEE_ID">
+			<generator class="assigned"></generator>
+		</id>
+		<property name="employeeName" column="EMPLOYEE_NAME"></property>
+		<property name="address" column="ADDRESS"></property>
+		<property name="phoneNumber" column="PHONE_NUMBER"></property>
+	</class>
+
+</hibernate-mapping>
+        

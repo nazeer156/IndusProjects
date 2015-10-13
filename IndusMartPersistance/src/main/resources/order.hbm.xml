@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC
+        "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+        "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+
+<hibernate-mapping package="com.indus.persistance.domain" >
+
+	<class name="Orders" table="ORDERS" lazy="true">
+
+		<id name="orderId" column="ORDER_ID">
+			<generator class="assigned"></generator>
+		</id>
+		<property name="customerId" column="CUSTOMER_ID" ></property>
+		<property name="employeeId" column="EMPLOYEE_ID"></property>
+		<property name="orderDate" column="ORDER_DATE"></property>
+		<property name="shipDate" column="SHIP_DATE"></property>
+		<property name="unitPrice" column="UNIT_PRICE"></property>
+		<property name="quantity" column="QUANTITY"></property>
+	</class>
+</hibernate-mapping>
+        
