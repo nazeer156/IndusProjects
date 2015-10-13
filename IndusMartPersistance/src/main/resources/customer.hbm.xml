@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC
+        "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+        "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+
+<hibernate-mapping package="com.indus.persistance.domain">
+
+	<class name="Customer" table="CUSTOMERS">
+		<id name="customerId" type="java.lang.Integer">
+		<column name="CUSTOMER_ID" />
+			<generator class="sequence-identity">
+			 <param name="sequence">CUSTOMER_SEQUENCE</param>
+			</generator>
+		</id>
+		<property name="customerName" column="CUSTOMER_NAME"></property>
+		<property name="phoneNumber" column="PHONE_NUMBER"></property>
+		<property name="address" column="ADDRESS"></property>
+	</class>
+
+</hibernate-mapping>
