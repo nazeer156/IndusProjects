@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE struts PUBLIC
+"-//Apache Software Foundation//DTD Struts Configuration 2.0//EN"
+"http://struts.apache.org/dtds/struts-2.0.dtd">
+<struts >
+	<package name="default" namespace="" extends="struts-default"  >
+
+	
+		<action name="Home" >
+			<result >/pages/Home.jsp</result>
+		</action>
+
+		<action name="getCustomerTODetails" method="getCustomerTODetails"
+			class="com.indus.training.ui.impl.IndusMartPO">
+
+			<result name="success">/pages/CustomerDetails.jsp</result>
+			<result name="failure">/pages/Home.jsp</result>
+
+		</action>
+
+	<!-- 	<action name="subtract" method="sub"
+			class="com.indus.training.ui.model.CalciPO">
+			<result name="success">/pages/CalcOutput.jsp</result>
+			<result name="failure">/pages/CalcInput.jsp</result>
+		</action>
+
+		<action name="multiply" method="mul"
+			class="com.indus.training.ui.model.CalciPO">
+			<result name="success">/pages/CalcOutput.jsp</result>
+			<result name="failure">/pages/CalcInput.jsp</result>
+		</action>
+
+		<action name="division" method="div"
+			class="com.indus.training.ui.model.CalciPO">
+			<result name="failure">/pages/CalcInput.jsp</result>
+			<result name="success">/pages/CalcOutput.jsp</result>
+
+		</action> -->
+
+	</package>
+
+</struts>
